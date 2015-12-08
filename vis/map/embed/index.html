@@ -3,15 +3,15 @@
     <head>
         <base target="_parent" />
         <!--[if lt IE 9]>
-        <script src="http://index.okfn.org/static/vendor/html5shiv.min.js"></script>
+        <script src="/static/vendor/html5shiv.min.js"></script>
         <![endif]-->
 
-<link rel="stylesheet" type="text/css" href="http://index.okfn.org/static/css/map.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/map.css" />
         <script>
-            var siteUrl = "http://index.okfn.org",
-                currentYear = "2014",
-                previousYear = "2013",
-                years = ["2014", "2013"],
+            var siteUrl = "",
+                currentYear = "2015",
+                previousYear = "2014",
+                years = ["2015", "2014", "2013"],
                 sitename = "Open Data Index",
                 sponsor = "Open Knowledge";
         </script>
@@ -23,52 +23,49 @@
             <div id="map"></div>
             <div class="odi-vis-title"></div>
         </div>
-    </div>
-    <div class="odi-vis-meta">
-        <div class="odi-vis-meta-left">
-            <div class="odi-vis-icon"><a target="_parent" href="https://okfn.org/" title="Go to the Open Knowledge website"><img src="http://index.okfn.org/static/images/logo-embed.png" /></a></div><a class="odi-vis-name" target="_parent" href="https://okfn.org/" title="Go to the Open Knowledge website">Open Knowledge</a>
-            <div class="odi-vis-tools">
-                <i class="icon icon-filter" title="Filter the vis data"></i>
-                <select class="odi-filter-year"></select>
-                <select class="odi-filter-dataset">
-                    <option value="all">All Datasets</option>
-                </select>
+        <div class="odi-vis-meta">
+            <div class="odi-vis-meta-left">
+                <div class="odi-vis-icon">
+                    <a target="_parent" href="https://okfn.org/" title="Go to the Open Knowledge website">
+                        <img src="/static/images/logo.png" />
+                    </a>
+                </div>
+                <a class="odi-vis-name" target="_parent" href="https://okfn.org/" title="Go to the Open Knowledge website">Open Knowledge</a>
             </div>
-        </div>
-        <div class="odi-vis-meta-right">
-            <div class="odi-vis-legend odi-vis-show-legend-full" title="How to read this visualisation">
-                <ul>
-                    <li data-score="0">&nbsp;</li>
-                    <li data-score="50">&nbsp;</li>
-                    <li data-score="100">&nbsp;</li>
-                </ul>
+            <div class="odi-vis-meta-right">
+
+                <div class="odi-vis-nav">
+                    <a class="odi-vis-nav-zoom-in" href="#" title="Zoom in">+</a>
+                    <a class="odi-vis-nav-zoom-out" href="#" title="Zoom out">-</a>
+                    <a class="odi-vis-nav-zoom-min fa fa-share-alt" href="#" title="Zoom min"></a>
+                </div>
+
+                <div class="odi-vis-tools">
+                    <i class="icon icon-filter" title="Filter the vis data"></i>
+                    <select class="odi-filter-year"></select>
+                    <select class="odi-filter-dataset">
+                        <option value="all">All Datasets</option>
+                    </select>
+                </div>
+
+                <div class="odi-vis-legend odi-vis-show-legend-full" title="How to read this visualisation">
+                    <ul>
+                        <li data-score="0">&nbsp;</li>
+                        <li data-score="30">&nbsp;</li>
+                    </ul>
+                    <ul>
+                        <li data-score="60">&nbsp;</li>
+                        <li data-score="100">&nbsp;</li>
+                    </ul>
+                </div>
             </div>
-            <div class="odi-vis-help odi-vis-show-info" title="See the credits and license information">
-                <span class="odi-vis-action"><i class="fa fa-info-circle"></i></span>
-            </div>
-            <div class="odi-vis-share-embed odi-vis-show-info" title="Share or Embed this visualisation">
-                <span class="odi-vis-action">Share / Embed</span>
-            </div>
-        </div>
-        <div class="odi-vis-legend-full">
-            <div class="odi-vis-info-title">How to read the map<span class="odi-vis-legend-full-close"><i class="fa fa-close"></i></span></div>
-            <div class="odi-vis-info-text">
+            <div class="odi-vis-legend-full">
+                <div class="odi-vis-info-title">How to read the map<span class="odi-vis-legend-full-close"><i class="fa fa-close"></i></span></div>
+                <div class="odi-vis-info-text">
                 <span>
-                    Place colouring represents the open data score for the currently selected dataset(s), from 0 to 100.
+                    Place colouring represents the open data score for the currently selected dataset(s), from <i data-score="0">0</i> to <i data-score="100">100</i>.
                 </span>
-                <ul>
-                    <li data-score="0">&nbsp;</li>
-                    <li data-score="10">&nbsp;</li>
-                    <li data-score="20">&nbsp;</li>
-                    <li data-score="30">&nbsp;</li>
-                    <li data-score="40">&nbsp;</li>
-                    <li data-score="50">&nbsp;</li>
-                    <li data-score="60">&nbsp;</li>
-                    <li data-score="70">&nbsp;</li>
-                    <li data-score="80">&nbsp;</li>
-                    <li data-score="90">&nbsp;</li>
-                    <li data-score="100">&nbsp;</li>
-                </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -94,7 +91,7 @@
         </p>
         <div class="odi-vis-share"
              title="Share this visualisation with others">
-            <a target="_blank" href="http://twitter.com/share?url=http://index.okfn.org&text=Check out this data from the Global Open Data Index" title="Share this visualisation on Twitter"><i class="fa fa-twitter-square"></i></a>&nbsp;<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http://index.okfn.org" title="Share this visualisation on Facebook"><i class="fa fa-facebook-square"></i></a>&nbsp;<a target="_blank" href="https://plus.google.com/share?url=http://index.okfn.org" title="Share this visualisation on Google+"><i class="fa fa-google-plus-square"></i></a>&nbsp;
+            <a target="_blank" href="http://twitter.com/share?url=&text=Check out this data from the Global Open Data Index" title="Share this visualisation on Twitter"><i class="fa fa-twitter-square"></i></a>&nbsp;<a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=" title="Share this visualisation on Facebook"><i class="fa fa-facebook-square"></i></a>&nbsp;<a target="_blank" href="https://plus.google.com/share?url=" title="Share this visualisation on Google+"><i class="fa fa-google-plus-square"></i></a>&nbsp;
         </div>
     </div>
     <div class="odi-vis-info-section">
@@ -103,7 +100,7 @@
             Use the following code to embed this visualisation into your own website.
         </p>
         <div>
-            <xmp contenteditable="true"><iframe width="100%" height="508px" src="http://index.okfn.org/vis/map/embed<%= state_params %>" frameBorder="0"></iframe></xmp>
+            <xmp contenteditable="true"><iframe width="100%" height="300px" src="/vis/map/embed<%= state_params %>" frameBorder="0"></iframe></xmp>
         </div>
     </div>
 </script>
@@ -114,7 +111,7 @@
         <p>
             <%= name %> is ranked at <strong>#<%= rank %></strong> in the <%= year %> Index with a score of <strong><%= score %>&#37;</strong><% if (previous_score) { %>, (<%= previous_score %>&#37; the previous year)<% } %>.
         </p>
-        <a class="odi-vis-place-action" href="http://index.okfn.org/place/<%= slug %>/" title="More information about <%= name %> in the <%= year %> Open Data Index">Find out more</a>
+        <a class="odi-vis-place-action" href="/place/<%= slug %>/" title="More information about <%= name %> in the <%= year %> Open Data Index">Find out more</a>
     </div>
 </script>
 
@@ -133,18 +130,7 @@
 <script type="text/template" class="title-box">
     <div class="title-box-text"><span class="title-box-text-name"><%= sitename %></span><br /><%= title %></div>
 </script>
-<script data-main="http://index.okfn.org/static/scripts/map" src="http://index.okfn.org/static/scripts/require.js"></script>
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-33874954-22']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+<script data-main="/static/scripts/map" src="/static/scripts/require.js"></script>
 
     </body>
 </html>
